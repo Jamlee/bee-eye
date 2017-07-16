@@ -1,0 +1,94 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:Dashboard.Views"
+    xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Class="Dashboard.Views.LatencyPage"
+    mc:Ignorable="d"
+    xmlns:prism="http://prismlibrary.com/"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    Width="1016.517" Height="645.655">
+
+    <Grid Height="251" VerticalAlignment="Top" Margin="0,1,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <!-- 资源占用图 -->
+        <lvc:AngularGauge Value="{Binding CpuUsage}" FromValue="0" ToValue="100" 
+                          LabelsStep="10" TicksStep="2" Wedge="240"
+                          TicksForeground="White" Foreground="White"
+                          FontSize="8"
+                          SectionsInnerRadius=".7" Margin="10,11.25,739,-4.25" Grid.Row="1" NeedleFill="#FF4D6A78" FlowDirection="LeftToRight" RenderTransformOrigin="0.677,0.348">
+            <lvc:AngularGauge.Sections>
+                <lvc:AngularSection FromValue="0" ToValue="50">
+                    <lvc:AngularSection.Fill>
+                        <LinearGradientBrush>
+                            <LinearGradientBrush.Transform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-131.987"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.Transform>
+                            <GradientStop Color="#28A428" Offset="0.5" />
+                            <GradientStop Color="#FCE20B" Offset="1" />
+                        </LinearGradientBrush>
+                    </lvc:AngularSection.Fill>
+                </lvc:AngularSection>
+                <lvc:AngularSection FromValue="50" ToValue="100">
+                    <lvc:AngularSection.Fill>
+                        <LinearGradientBrush >
+                            <GradientStop Color="#FC280B" Offset="1" />
+                            <GradientStop Color="#FCE20B" Offset="0.2" />
+                        </LinearGradientBrush>
+                    </lvc:AngularSection.Fill>
+                </lvc:AngularSection>
+            </lvc:AngularGauge.Sections>
+        </lvc:AngularGauge>
+
+        <lvc:CartesianChart x:Name="LatencyChart" AnimationsSpeed="0:0:1"
+                            Hoverable="False" DataTooltip="{x:Null}"
+                            LegendLocation="None"
+                            Margin="309,0,0,10" HorizontalAlignment="Left" Width="592" Grid.Row="1" >
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries Values="{Binding ChartValues}"
+                                PointGeometry="{x:Null}"
+                                LineSmoothness="1"
+                                StrokeThickness="1"
+                                Title="{x:Null}"
+                                Stroke="#36ACF3"/>
+            </lvc:CartesianChart.Series>
+            <!-- 坐标点 -->
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis 
+                    ShowLabels="False"
+                    LabelFormatter="{Binding DateTimeFormatter}"
+                    MaxValue="{Binding AxisMax}" 
+                    MinValue="{Binding AxisMin}"
+                    Unit="{Binding AxisUnit}">
+                    <lvc:Axis.Separator>
+                        <lvc:Separator Step="{Binding AxisStep}" />
+                    </lvc:Axis.Separator>
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis MinValue="0"
+                          MaxValue="110"
+                          LabelFormatter="{Binding CpuFormatter}">
+                    <lvc:Axis.Separator>
+                        <lvc:Separator Step="10" />
+                    </lvc:Axis.Separator>
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
+
+        <Grid Margin="0,6,0,0" Grid.RowSpan="2">
+            <TextBlock HorizontalAlignment="Left" Margin="14,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft Sans Serif" Height="27" Width="120" Foreground="#FF8D8D8D"><Run Text="CPU "/><Run Text="负载"/></TextBlock>
+            <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="122,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" RenderTransformOrigin="0.541,-0.569"><Run Text="占"/><Run Text="用"/><Run Text="率"/><Run Text="("/><Run Text="%"/><Run Text=")"/></TextBlock>
+        </Grid>
+        <Separator Height="4.25" Margin="0,200,0,-4.25" Grid.Row="1" VerticalAlignment="Top" Background="#FFDADADA"/>
+    </Grid>
+</Page>

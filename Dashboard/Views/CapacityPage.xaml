@@ -1,0 +1,29 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dashboard.Views"
+      xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Class="Dashboard.Views.CapacityPage"
+      mc:Ignorable="d"
+      Title="CapacityPage" Width="1112.069" Height="810.448">
+    <Grid>
+        <Separator Height="23" Margin="-10,261,10,0" VerticalAlignment="Top" Background="LightGray"/>
+        <Wpf:PieChart x:Name="Capacity" Series="{Binding CapacitySeriesCollection}" 
+            InnerRadius="50" Margin="46,72,895,0" DisableAnimations="True" Height="161.4" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" >
+            <Wpf:PieChart.ChartLegend >
+                <Wpf:DefaultLegend BulletSize="1" IsEnabled="False"/>
+            </Wpf:PieChart.ChartLegend>
+            <Wpf:PieChart.DataTooltip>
+                <Wpf:DefaultTooltip BulletSize="1" IsEnabled="False"/>
+            </Wpf:PieChart.DataTooltip>
+            <Wpf:PieChart.AxisX>
+                <Wpf:Axis IsEnabled="False" ShowLabels="False"/>
+            </Wpf:PieChart.AxisX>
+            <Wpf:PieChart.AxisY>
+                <Wpf:Axis IsEnabled="False" ShowLabels="False"/>
+            </Wpf:PieChart.AxisY>
+        </Wpf:PieChart>
+        <TextBlock HorizontalAlignment="Left" Margin="25,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Width="67" FontFamily="Microsoft Sans Serif" Text="容量" Foreground="#FF9E9E9E"/>
+    </Grid>
+</Page>

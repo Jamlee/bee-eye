@@ -1,0 +1,13 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:local="clr-namespace:scaleio.Views" x:Name="PrimaryWindow" x:Class="scaleio.Views.MainWindow"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}" Height="700" Width="1260" ResizeMode="NoResize">
+    <Grid x:Name="MainGrid" Width="1260">
+        <ContentControl x:Name="EventRegion"  prism:RegionManager.RegionName="EventRegion" Margin="0,629,0,0" Height="40" />
+        <ContentControl x:Name="NavRegion"  prism:RegionManager.RegionName="NavRegion" Height="39" MinHeight="30" VerticalAlignment="Top" />
+        <ContentControl x:Name="MainRegion" prism:RegionManager.RegionName="MainRegion" Margin="0,30,0,102" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
