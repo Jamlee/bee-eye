@@ -1,6 +1,6 @@
 ﻿using Prism.Mvvm;
 
-namespace scaleio.ViewModels
+namespace Bee.Eye.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {

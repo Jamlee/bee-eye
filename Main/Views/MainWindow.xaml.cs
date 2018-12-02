@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace scaleio.Views
+namespace Bee.Eye.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

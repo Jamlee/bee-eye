@@ -57,7 +57,7 @@
         </Grid.ColumnDefinitions>
 
         <GroupBox Header="  连接  " Margin="65.051,39,50.377,61.31" BorderBrush="White"
-                  Style="{StaticResource GroupboxWithoutWhiteBorder}" d:LayoutOverrides="TopMargin, BottomMargin">
+                  Style="{StaticResource GroupboxWithoutWhiteBorder}">
             <Grid Grid.Column="1" Margin="0,0,0,-3">
                 <Button Content="测试并连接" Margin="0,290,15.641,0" VerticalAlignment="Top" Height="19" HorizontalAlignment="Right" Width="75" >
                     <i:Interaction.Triggers>

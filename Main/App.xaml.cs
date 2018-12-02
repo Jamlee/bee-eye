@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace scaleio
+namespace Bee.Eye
 {
     /// <summary>
     /// Interaction logic for App.xaml

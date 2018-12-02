@@ -5,11 +5,11 @@ using Nav;
 using Prism.Autofac;
 using Prism.Events;
 using Prism.Modularity;
-using scaleio.Views;
+using Bee.Eye.Views;
 using System;
 using System.Windows;
 
-namespace scaleio
+namespace Bee.Eye
 {
     class Bootstrapper : AutofacBootstrapper
     {
