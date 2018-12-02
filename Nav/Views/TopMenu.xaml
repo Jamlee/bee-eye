@@ -5,24 +5,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Nav.Views"
              mc:Ignorable="d"
-             d:DesignHeight="30" d:DesignWidth="600">
-    <Menu Height="33" Background="White" BorderThickness="0,0,0,3" BorderBrush="#FFD8D8D8" Padding="0">
-        <MenuItem x:Name="file" Height="30" Width="63" Padding="0">
-            <MenuItem.Header>
-                <TextBlock Width="{Binding ActualWidth, ElementName=file, Mode=OneWay}" VerticalAlignment="Center" TextAlignment="Center">
-                    文件
-                </TextBlock>
-            </MenuItem.Header>
-            <MenuItem Header="新建连接" HorizontalAlignment="Left" Height="26" Width="144" Click="NewConnection_Click"/>
-            <MenuItem Header="退出" HorizontalAlignment="Left" Height="26" Width="144"/>
-        </MenuItem>
-        <MenuItem x:Name="help" Height="30" Width="63" Padding="0">
-            <MenuItem.Header>
-                <TextBlock Width="{Binding ActualWidth, ElementName=help, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center">
-                    帮助
-                </TextBlock>
-            </MenuItem.Header>
-            <MenuItem Header="系统信息" HorizontalAlignment="Left" Height="24" Width="144"/>
-        </MenuItem>
-    </Menu>
+             Background="#FF22CB64" d:DesignWidth="600" Height="175">
+  <Grid d:LayoutOverrides="Width"/>
 </UserControl>
