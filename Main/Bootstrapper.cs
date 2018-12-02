@@ -1,17 +1,15 @@
 ﻿using Autofac;
-using Autofac.Core;
+using Bee.Eye.Views;
 using Dashboard;
 using Nav;
 using Prism.Autofac;
-using Prism.Events;
 using Prism.Modularity;
-using Bee.Eye.Views;
 using System;
 using System.Windows;
 
 namespace Bee.Eye
 {
-    class Bootstrapper : AutofacBootstrapper
+  class Bootstrapper : AutofacBootstrapper
     {
         // 从 Container 中获取到 Shell 实例
         protected override DependencyObject CreateShell()
