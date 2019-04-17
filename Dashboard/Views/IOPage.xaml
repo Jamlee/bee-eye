@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Dashboard.Views"
       xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Class="Dashboard.Views.IOPage"
       mc:Ignorable="d"
-      Title="IOPage" Width="1090.517" Height="645.655">
+      Title="IOPage" Width="1300" Height="630">
 
 
     <Grid Height="279" VerticalAlignment="Top" Margin="0,1,10,0">

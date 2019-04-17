@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Dashboard.Views"
       xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Class="Dashboard.Views.CapacityPage"
       mc:Ignorable="d"
-      Title="CapacityPage" Width="1112.069" Height="810.448">
+      Title="CapacityPage" Width="1300" Height="630">
     <Grid>
         <Separator Height="23" Margin="-10,261,10,0" VerticalAlignment="Top" Background="LightGray"/>
         <Wpf:PieChart x:Name="Capacity" Series="{Binding CapacitySeriesCollection}" 

@@ -8,14 +8,14 @@
         AllowsTransparency="True"
         x:Name="PrimaryWindow"
         x:Class="Bee.Eye.Views.MainWindow"
-        BorderThickness="25"
+        BorderThickness="6"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="700" Width="1300" ResizeMode="NoResize">
   <Window.Effect>
-    <DropShadowEffect Opacity="0.3" Direction="90" Color="#FF3A3A3A" ShadowDepth="3" BlurRadius="24"/>
+    <DropShadowEffect Opacity="1" Direction="90" Color="#FF040404" ShadowDepth="0" BlurRadius="4"/>
   </Window.Effect>
   <Grid x:Name="MainGrid" Margin="0,0,0,0">
-    <ContentControl x:Name="NavRegion"  prism:RegionManager.RegionName="NavRegion" MinHeight="30" Margin="0,0,0,475" HorizontalAlignment="Left" Width="1250" Height="175" />
-    <ContentControl x:Name="MainRegion" prism:RegionManager.RegionName="MainRegion" Margin="0,175,0,0" HorizontalAlignment="Left" Width="1250" Height="475"/>
+    <ContentControl x:Name="NavRegion" MouseMove="NavRegion_MouseMove" prism:RegionManager.RegionName="NavRegion" MinHeight="50" Margin="0,0,0,630" HorizontalAlignment="Left" Width="1288" />
+    <ContentControl x:Name="MainRegion" prism:RegionManager.RegionName="MainRegion" Margin="0,58,0,0" HorizontalAlignment="Left" Width="1288"/>
   </Grid>
 </Window>

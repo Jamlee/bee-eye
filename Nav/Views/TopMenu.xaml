@@ -5,6 +5,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Nav.Views"
              mc:Ignorable="d"
-             Background="#FF22CB64" d:DesignWidth="600" Height="175">
-  <Grid d:LayoutOverrides="Width"/>
+             Background="#EEF0F6" d:DesignWidth="600" Height="58">
+  <Grid Margin="0,0,0,0" />
 </UserControl>

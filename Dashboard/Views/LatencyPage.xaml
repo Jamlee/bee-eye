@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     xmlns:prism="http://prismlibrary.com/"
     prism:ViewModelLocator.AutoWireViewModel="True"
-    Width="1016.517" Height="645.655">
+    Width="1300" Height="630">
 
     <Grid Height="251" VerticalAlignment="Top" Margin="0,1,0,0">
         <Grid.RowDefinitions>
