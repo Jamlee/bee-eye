@@ -52,7 +52,7 @@
         <lvc:CartesianChart x:Name="LatencyChart" AnimationsSpeed="0:0:1"
                             Hoverable="False" DataTooltip="{x:Null}"
                             LegendLocation="None"
-                            Margin="309,0,0,10" HorizontalAlignment="Left" Width="592" Grid.Row="1" >
+                            Margin="437,0,0,10" HorizontalAlignment="Left" Width="592" Grid.Row="1" >
             <lvc:CartesianChart.Series>
                 <lvc:LineSeries Values="{Binding ChartValues}"
                                 PointGeometry="{x:Null}"
